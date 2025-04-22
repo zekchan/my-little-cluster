@@ -1,18 +1,9 @@
-variable "gcp_organization_id" {
-  description = "The ID of the GCP organization"
-  type        = string
-}
-
 variable "gcp_region" {
   description = "The region where resources will be created"
   type        = string
   default     = "us-central1"
 }
 
-variable "gcp_project_name" {
-  description = "The name of the project"
-  type        = string
-}
 
 variable "gcp_billing_account" {
   description = "The ID of the billing account to associate with the project"
