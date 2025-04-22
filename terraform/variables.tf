@@ -1,9 +1,8 @@
 variable "gcp_region" {
   description = "The region where resources will be created"
   type        = string
-  default     = "us-central1"
+  default     = "europe-north2"
 }
-
 
 variable "gcp_billing_account" {
   description = "The ID of the billing account to associate with the project"

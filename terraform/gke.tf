@@ -1,7 +1,7 @@
 resource "google_container_cluster" "default" {
   name = "example-autopilot-cluster"
 
-  location                 = "us-central1"
+  location                 = var.gcp_region
   enable_autopilot         = true
   enable_l4_ilb_subsetting = true
 
