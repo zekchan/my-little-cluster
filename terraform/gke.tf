@@ -1,12 +1,12 @@
 resource "google_container_cluster" "default" {
-  name = "example-autopilot-cluster"
+  name = var.gke_cluster_name
 
   location                 = var.gcp_region
   enable_autopilot         = true
   enable_l4_ilb_subsetting = true
 
-  network    = var.gke_network
-  subnetwork = var.gke_subnetwork
+  network    = google_compute_network.vpc.name
+  subnetwork = google_compute_subnetwork.subnet.name
 
   ip_allocation_policy {
     stack_type                    = "IPV4"
