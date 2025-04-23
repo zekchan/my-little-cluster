@@ -18,3 +18,24 @@ resource "google_container_cluster" "default" {
   # accidentally delete this instance by use of Terraform.
   deletion_protection = false
 }
+
+output "cluster_name" {
+  value = google_container_cluster.default.name
+}
+
+output "cluster_location" {
+  value = google_container_cluster.default.location
+}
+
+output "cluster_endpoint" {
+  value = google_container_cluster.default.endpoint
+}
+
+output "cluster_master_version" {
+  value = google_container_cluster.default.master_version
+}
+
+output "cluster_node_version" {
+  value = google_container_cluster.default.node_version
+}
+
